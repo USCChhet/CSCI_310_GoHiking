@@ -22,4 +22,10 @@
         android:name="edu.usc.ctrlc_ctrlv_go_hiking.ui.notifications.NotificationsFragment"
         android:label="@string/title_notifications"
         tools:layout="@layout/fragment_notifications" />
+
+    <fragment
+        android:id="@+id/navigation_test"
+        android:name="edu.usc.ctrlc_ctrlv_go_hiking.ui.test.TestFragment"
+        android:label="@string/title_test"
+        tools:layout="@layout/fragment_test" />
 </navigation>
