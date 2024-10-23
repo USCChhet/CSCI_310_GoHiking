@@ -2,6 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <!-- Internet permission required for Firebase Authentication -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -12,6 +16,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.CS310CTRLCCTRLV_GoHiking"
         tools:targetApi="31">
+
         <activity
             android:name=".MainActivity"
             android:exported="true"
@@ -22,6 +27,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <!-- Firebase Authentication UI activity -->
+        <activity
+            android:name="com.firebase.ui.auth.KickoffActivity"
+            android:exported="false"
+            android:theme="@style/Theme.Material3.Light.NoActionBar"
+            tools:replace="android:theme" /> <!-- consider deleting if wanting to use firebase theme later-->
+
     </application>
 
 </manifest>

@@ -1,29 +1,63 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.login.LoginFragment">
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:gravity="center">
 
+    <!-- View with Login and Create Account Buttons -->
     <LinearLayout
-        android:orientation="vertical"
-        android:gravity="center"
+        android:id="@+id/buttonContainer"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:padding="50dp">
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center">
 
-        <Button
-            android:id="@+id/button"
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/buttonLogin"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/login" />
+            android:text="Login" />
 
-        <Button
-            android:id="@+id/button2"
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/buttonCreateAccount"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/create_account" />
+            android:text="Create Account"
+            android:layout_marginTop="8dp" />
     </LinearLayout>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <!-- Create Account Form (Initially Hidden) -->
+    <LinearLayout
+        android:id="@+id/createAccountForm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:gravity="center">
+
+        <EditText
+            android:id="@+id/editTextEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Email"
+            android:inputType="textEmailAddress" />
+
+        <EditText
+            android:id="@+id/editTextPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Password"
+            android:inputType="textPassword" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/buttonSubmitCreateAccount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Create Account"
+            android:layout_marginTop="8dp" />
+    </LinearLayout>
+
+</LinearLayout>

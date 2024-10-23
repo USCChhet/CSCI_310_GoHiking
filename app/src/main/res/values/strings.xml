@@ -5,4 +5,9 @@
     <string name="title_login">Login</string>
     <string name="create_account">Create Account</string>
     <string name="login">Login</string>
+
+    <!-- New Strings -->
+    <string name="login_title">Welcome Back</string>
+    <string name="login_button_description">Tap to log in</string>
+    <string name="create_account_button_description">Tap to create a new account</string>
 </resources>
